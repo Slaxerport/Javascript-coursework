@@ -1,0 +1,102 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+#form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: clamp(250px, 20vw, 1000px);
+    height: auto;
+    aspect-ratio: 5/6;
+    max-height: 100vh !important;
+    padding: clamp(12px, 2vw, 20px);
+    gap: 12px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+#form h1{
+    font-family: "Figtree", sans-serif;
+    font-weight: 600;
+    font-size: clamp(18px, 2.5vw, 28px);
+    align-self: center;
+}
+#action-button{
+    width: 100%;
+    background-color: rgb(60, 86, 255);
+    color: white;
+    border: none;
+    padding: clamp(6px, 1vw, 12px);
+    border-radius: 15px;
+    align-self: center;
+    font-family: "Figtree", sans-serif;
+}
+#action-button:hover{
+    cursor: pointer;
+}
+input{
+    height: clamp(16px, 1.5vw, 48px);
+    background-color: transparent;
+    border: 1px solid black;
+    font-family: "Lato", sans-serif;
+    font-size: clamp(12px, 1vw, 36px);
+}
+p{
+    margin: 0;
+}
+.wrong{
+    color: red;
+    font-family: "Figtree", sans-serif;
+    font-size: clamp(11px, 0.8vw, 14px);
+}
+#back-button{
+    display: flex;
+    text-align: center;
+    gap: 5px;
+    color: rgb(48, 48, 231);
+    border: none;
+    background: none;
+    padding: 0.8vw 1vw;
+    font-size: clamp(12px, 0.7vw, 26px);
+    transition: all 0.1s linear;
+    align-self: center;
+}
+#back-button:hover{
+    font-size: clamp(13px, 0.8vw, 28px);
+    cursor: pointer;
+}
+#main-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    backdrop-filter: blur(10px);
+}
+#container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#password-visibility{
+    position: absolute;
+    left: 90%;
+    background: none;
+    border: none;
+}
+#visibility{
+    width: clamp(16px, 1.5vw, 1000px);
+    height: clamp(16px, 1.5vw, 1000px);
+}
+#visibility img{
+    width: 100%;
+    height: 100%;
+}
+#password{
+    width: 100%;
+}
+

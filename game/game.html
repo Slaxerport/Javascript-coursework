@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fishy Fun</title>
+    <link rel="icon" type = "image/x-icon" href="../images/fish.png">
+    <link rel = "stylesheet" href = "game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main-container">
+        <div id="terminal">
+            <header>
+                <h1>Fishy Fun</h1>
+                <div id="label">
+                    <button class = "arrow no-closing" id = "left-arrow" onclick = "prevLevel()"><span class = "no-closing">◀</span>
+                    <button class = "no-closing" id = "level-menu" onclick = "changeVisibility()">
+                        <span class = "no-closing" id = "level-status"></span>
+                    </button>
+                    <button class = "arrow no-closing" id = "right-arrow" onclick="nextLevel(event)"><span class = "no-closing">▶</span></button>
+                    <div class = "no-closing" id="level-switcher" style="visibility: hidden;">
+                        <button class="level" onclick = "tableLevel(event)" id = "fst
+                        ">1</button>
+                        <button class="level" onclick = "tableLevel(event)">2</button>
+                        <button class="level" onclick = "tableLevel(event)">3</button>
+                        <button class="level" onclick = "tableLevel(event)">4</button>
+                        <button class="level" onclick = "tableLevel(event)">5</button>
+                        <button class="level" onclick = "tableLevel(event)">6</button>
+                        <button class="level" onclick = "tableLevel(event)">7</button>
+                        <button class="level" onclick = "tableLevel(event)">8</button>
+                        <button class="level" onclick = "tableLevel(event)">9</button>
+                        <button class="level" onclick = "tableLevel(event)">10</button>
+                        <button class="level" onclick = "tableLevel(event)">11</button>
+                        <button class="level" onclick = "tableLevel(event)">12</button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <p id = "description"></p>
+                <div id="console">
+                    <ul id="numeration">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                    </ul>
+                    <div id="editor">
+                        <div class="locked-code" data-do-not-delete><p class = "fst-locked-code-child">.fish {</p>
+                            </div>
+                        <textarea name="" id="code" rows="2" oninput="checkWhatIsWritten()" data-do-not-delete></textarea>
+                        <div class="locked-code" data-do-not-delete><p style = "margin-top: 3px">}</p>
+                        </div>
+                    </div>                
+                </div>
+            </main>
+            <footer>
+                <a onclick = "save('https:\/\/github.com/Slaxerport/Javascript-coursework')">Github</a>
+                <span>&#x2022;</span>
+                <button id = "settings" onclick="save('../Main page/main-page.html')">Выйти</button>
+                <button id = "next-button">Следующий</a> 
+            </footer>
+        </div>
+        <div id="field">
+            <div id="output">
+                
+                <div id="fish">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src = "game.js"></script>
+</body>
+</html>

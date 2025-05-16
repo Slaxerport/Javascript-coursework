@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="logstyle.css">
+</head>
+<style>
+    #form p{
+        font-family: "Figtree", sans-serif;
+        font-size: clamp(12px, 0.8vw, 36px);
+        align-self: center;
+    }
+    #form p button{
+        border: none;
+        background: none;
+        color: rgb(48, 48, 231);
+        font-size: clamp(12px, 0.8vw, 26px);
+        padding: 0;
+        transition: font-size 0.1s linear;
+    }
+    #form p button:hover{
+        font-size: clamp(14px, calc(0.8vw+2px), 38px);
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div id="main-container">
+        <div id="form">
+            <h1>Войти</h1>
+            <input type="text" placeholder="Введите логин" id = "login">
+            <div id = "container">
+                <input type="password" placeholder="Введите пароль" id = "password">
+                <button id="password-visibility" onclick = "changePasswordVisibility()">
+                    <div id="visibility" data-visible>
+                        <img src="../images/hide.png" alt="">
+                    </div>
+                </button>
+            </div>
+            <button id = "action-button" onclick = "enter()">Войти</button>
+            <p>Нет аккаунта? <button onclick = "location.href='registration.html'">Зарегистрироваться</button></p>
+            <button type = "button" onclick = "location.href='main-page.html'" id = "back-button"><span>←</span> <span>Вернуться на главную страницу</span></button>
+        </div>
+    </div>
+    <script type="text/javascript" src = "logon.js"></script>
+</body>
+</html>

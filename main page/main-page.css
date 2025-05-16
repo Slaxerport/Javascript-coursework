@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #37517e;
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 3%;
+    font-family: "Poppins", sans-serif;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+header h1{
+    text-transform: uppercase;
+    color: white; 
+    font-weight: 500;
+    font-size: clamp(16px, 4vw, 36px)
+}
+.get-started-container{
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 1%;
+}
+.description h1{
+    color: white;
+    font-size: clamp(18px, 4vw, 48px);
+    font-weight: 700;
+    font-family: "Jost", sans-serif;
+}
+#motto{
+    font-size: clamp(14px, 4vw, 22px);
+    font-weight: 600;
+    color: #c2cad8;
+    font-family: "Jost", sans-serif;
+    text-align: center;
+}
+#enter{
+    display: flex;
+    width: 5vw;
+    height: 2vw;
+    min-width: 60px;
+    min-height: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(196, 108, 0);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: scale 0.1s linear;
+    font-size: 80%;
+}
+#enter:hover{
+    cursor:pointer;
+    scale: 1.1;
+}
+.profile{
+    color: white;
+}
+.image{
+    width: 20%;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8vw;
+    font-family: "Jost", sans-serif;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.game h1{
+    color: #f5ee9e;
+    font-size: clamp(20px, 2.5vw, 36px)
+}
+.game p{
+    width: 100%;
+    font-size: clamp(16px, 2vw, 20px);
+    color: white;
+    text-align: center;
+    padding: 1%;
+}
+.game button{
+    font-size: clamp(16px, 2vw, 20px);
+    color: white;
+    transition: font-size 0.1s linear;
+    background-color: rgb(14, 153, 54);    
+    padding: 8px 12px;
+    border: none;
+    border-radius: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+.game button:hover{
+    font-size: clamp(18px,2.2vw, 22px);
+    cursor: pointer;
+}
+#exit{
+    margin-left: 10px;
+    display: flex;
+    padding: 13px 18px;
+    background-color: rgb(138, 13, 13);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: scale 0.1s linear;
+}
+#exit:hover{
+    cursor:pointer;
+    scale: 1.1;
+}
+.pop-up{
+    position: absolute;
+    min-width: 300px;
+    min-height: 107px;
+    width: 28vw;
+    height: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    background-color: white;
+    color: rgb(52, 58, 64);
+}
+.pop-up p{
+    width: 71.14%;
+    font-size: clamp(12px, 1.2vw, 22px);
+}
+#sign-in{
+    transition: all 0.1s linear;
+}
+#sign-in:hover{
+    font-size: 1.25vw;
+}
+.pop-up a{
+    text-decoration: underline;
+    color: rgb(40, 167, 69);
+}
+#no-account{
+    margin-top: 2vh;
+    text-align: center;
+    font-size: clamp(8px, 2vw, 14px);
+}
+#no-account a{
+    color: #0d6efd;
+    transition: all 0.1s linear;
+}
+#no-account a:hover{
+    cursor: pointer;
+    font-size: clamp(9px, 2.1vw, 15px)
+}
+#close-button{
+    width: clamp(16px,2vw,40px);
+    height: clamp(16px,2vw,40px);
+    background: none;
+    border: none;
+    position: absolute;
+    left: 90%;
+    top: 5%;
+}
+#continue-button:hover, #close-button:hover{
+    cursor: pointer;
+}
+#close-button img{
+    width: 100%;
+    height: 100%;
+}
+.locked-background{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    animation: locking 0.2s ease-in-out 0s 1 normal forwards running;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+@keyframes pop-up-animation{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        top: 50%;
+        opacity: 1;
+    }
+}
+@keyframes locking{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.4;
+    }
+}
+@keyframes closing{
+    0%{
+        top: 50%;
+        opacity: 1;
+    }
+    100%{
+        top: 45%;
+        opacity: 0;
+    }
+}
+@keyframes unlocking{
+    0%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 0;
+    }
+}

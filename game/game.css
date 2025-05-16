@@ -1,0 +1,325 @@
+html, body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(140, 148, 217);
+}
+#main-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#terminal{
+    max-width: 50vw;
+    padding-left: 1vw;
+}
+#field{
+    padding-left: 20px;
+    width: 50vw;
+    height: 50vw;
+    max-width: 100vh;
+    max-height: 100vh;
+    min-width: 300px;
+    min-height: 300px;
+    z-index: 2;
+}
+header{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    font-family: "Fredoka", cursive;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #beffbb;
+}
+#label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    height: 40px;
+}
+.arrow, #level-menu{
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+.arrow{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+}
+#left-arrow{
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+#right-arrow{
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+#level-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+.arrow:hover, #level-menu:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#description{
+    color: white;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 18px;
+}
+#output{
+    background-image: linear-gradient(45deg,#2c3e50,#4ca1af);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    outline: 3px solid black;
+}
+#console{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+#numeration{
+    width: 20px;
+    list-style: none;
+    background-color: gray;
+    display: flex;
+    gap: 1px;
+    color:rgba(255, 255, 255, 0.664);
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+#editor{
+    width: calc(100% - 20px);
+    background-color: rgb(207, 107, 107);
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border-radius: 0 7px 7px 0;
+    
+}
+#code{
+    height: 100px;
+    padding: 0;
+    overflow: hidden;
+    line-height: 23px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    resize: none;
+    width: calc(100% - 20px);
+    color: white;
+    background-color: rgb(237, 138, 138);
+    
+}
+footer{
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+footer a{
+    text-decoration: none;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.777);
+    font-size: 12px;
+}
+footer a:hover{
+    cursor: pointer;
+}
+footer span{
+    font-size: 20px;
+    color: white;
+}
+#settings{
+    font-size: 12px;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 8px;
+    color: rgba(255, 255, 255, 0.8);
+}
+#settings:hover{
+    cursor: pointer;
+}
+#level-switcher{ 
+    padding: 10px;
+    background-color: rgb(22, 112, 191);
+    margin-top: 250px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 6px;
+}
+.level{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: rgb(224, 155, 25);
+    border: 1px solid rgb(224, 155, 25);
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+.opened-level:hover{
+    border: 1px solid rgb(255, 255, 255) !important; 
+    cursor: pointer;
+}
+#fish{
+    position: absolute;
+    width: 10vw;
+    height: auto;
+    aspect-ratio: 1/1;
+    min-width: 100px;
+    min-height: 100px;
+    z-index: 2;
+}
+#fish img{
+    width: 100%;
+    height: 100%;
+}
+.select{
+    font-weight: bolder;
+    text-decoration: underline;
+    font-family: monospace;
+}
+#next-button{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: calc(100% - 100px);
+    width: 100px;
+    height: 40px;
+    background-color: rgb(132, 126, 126);
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Rubik", sans-serif;
+    transition: background-color 0.3s linear;
+    border: none;
+}
+#next-button:hover{
+    cursor: pointer;
+}
+.fish-mother{
+    position: relative;
+    z-index: 1;
+    width: 10vw;
+    height: 10vw;
+    min-width: 100px;
+    min-height: 100px;
+}
+.fish-mother img{
+    width: 100%;
+    height: 100%;
+}
+.locked-code{
+    color: white;
+    font-family: monospace;
+    margin-left: 10px;
+}
+.fst-locked-code-child{
+    margin-top: 12px !important;
+}
+.locked-code p{
+    margin-bottom: 0;
+    margin-top: 9px;
+}
+.select-size{
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+}
+.select-code{
+    background-color: rgb(106, 112, 167);
+    font-size: 16px;
+    border-radius: 12px;
+    padding: 3px;
+    font-family: "Montserrat", sans;
+}
+.fish-house{
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    min-width: 100px;
+    min-height: 100px;
+    box-sizing: border-box;
+}
+.fish-house img{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media(max-width: 868px){
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media(max-width: 768px){
+    #main-container{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    #field{
+        padding-left: 0px;
+        width: 50vw !important;
+        height: 50vw !important;
+        max-height: 50vh;
+        max-width: 50vh;
+    }
+    #output{
+        height: 100% !important;
+    }
+    #terminal{
+        width: 100%;
+        max-width: none;
+    }
+    #terminal header, main{
+        align-items: center;
+    }
+    #description{
+        padding: 0 5% 0 5%;
+    }
+}
