@@ -99,4 +99,8 @@ p{
 #password{
     width: 100%;
 }
+#form p{
+    align-self: center;
+    text-align: center;
+}
 

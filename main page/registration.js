@@ -1,5 +1,5 @@
 let login = document.getElementById("login");
-let password = document.getElementById("password");
+let password = document.getElementById("container");
 let localStorage = window.localStorage;
 let registrationButton = document.getElementById("registration");
 let users = JSON.parse(localStorage.getItem("users"));
